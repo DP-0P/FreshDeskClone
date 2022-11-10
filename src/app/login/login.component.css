@@ -1,0 +1,73 @@
+#navbarLogo{
+    /* size: 5px; */
+    height: 25px;
+}
+
+
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+
+#login{
+    text-align: center;
+    padding-bottom: 250px;
+}
+
+#inputName{
+    width: 250px;
+    padding: 10px 10px;
+}
+
+#loginInput{
+    padding-top: 2px;
+    padding-bottom: 20px;
+    display: inline;
+    border-style: groove;
+    /* padding: 10px 10px; */
+    /* background-color: rgb(232, 232, 232); */
+}
+
+#proceed{
+    border-style: none;
+    border-radius: 5px;
+    width: 430px;
+    background-color:#5d35d7;
+    color: white;
+    font-weight: 600;
+    padding: 7px;
+    transition-duration: 0.4s;
+}
+
+#proceed:hover{
+    background-color: #4828a7;
+}
+
+#sign{
+    width: 350px;
+    border-style: none;
+    padding: 20px;
+    font-weight: 700;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+
+form{
+    padding-bottom: 30px;
+}
+
+#sign:hover{
+    background-color: rgb(204, 204, 204);
+}
+
+.bg-footer {
+    background-color: #33383c;
+    padding: 30px 0 30px;
+    color: #fff;
+}
+
+#wrongPassword{
+    background-color: red;
+}

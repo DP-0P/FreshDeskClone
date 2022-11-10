@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+    <div class="contain">
+        <a class="navbar-brand" href="#">
+            <img id="navbarLogo"
+                src="https://freshdesk.com/static-assets/images/common/company/logos/logo-fworks-black.svg" alt="..."
+                height="36">
+        </a>
+    </div>
+</nav>
+<div id="first">
+    <span id="freshdesk">Freshdesk</span>
+    <div class="grid-container">
+        <div class="grid-item">
+            <h1 id="gridUl">Try Freshdesk for free</h1>
+            <h3 id="noCredit">No credit card required. No strings attached.</h3>
+            <ul>
+                <li id="gridLi">75% reduction in ticket resolution time</li>
+                <li id="gridLi">
+                    < 3 month payback period</li>
+                <li id="gridLi">54 hours per agent per year saved with automations</li>
+            </ul>
+        </div>
+        <div class="grid-item">
+            <div class="container">
+                <form id="contact" [formGroup]="myForm" (ngSubmit)="register(myForm)">
+                    <span>Sign up for a free trial</span>
+                    <fieldset>
+                        <input placeholder="First name" [(ngModel)]="myForm.value.firstName" type="text"
+                            formControlName="firstName" tabindex="1" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input placeholder="Last name" [(ngModel)]="myForm.value.lastName" formControlName="lastName"
+                            type="text" tabindex="4" required>
+                    </fieldset>
+                    <fieldset>
+                        <input placeholder="Phone" [(ngModel)]="myForm.value.phone"
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                            formControlName="phone" type="text" tabindex="2" required>
+                    </fieldset>
+                    <fieldset>
+                        <input placeholder="email" type="text" [(ngModel)]="myForm.value.email" formControlName="email"
+                            tabindex="4" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <input placeholder="User name" [(ngModel)]="myForm.value.userName" formControlName="userName"
+                            type="text" tabindex="4" required>
+                    </fieldset>
+                    <fieldset>
+                        <input placeholder="Password" [(ngModel)]="myForm.value.password" formControlName="password"
+                            type="password" tabindex="4" required>
+                    </fieldset>
+                    <fieldset>
+                        <button
+                            [disabled]="!myForm.value.firstName || !myForm.value.lastName || !myForm.value.email || !myForm.value.phone || !myForm.value.userName || !myForm.value.password"
+                            name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

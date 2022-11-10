@@ -1,0 +1,76 @@
+<div class="sidebar close">
+  <div class="logo-details">
+    <i>
+      <img id="headPhone"
+        src="https://indfassetsblue.freshdesk.com/production/a/assets/images/svg/global-flat/freshdesk-white-ed8bccfc2af481a824ee2540d0931d2067b899bee68416514073d81253791c8a.svg"
+        alt="">
+    </i>
+  </div>
+  <ul class="nav-links">
+
+    <li>
+      <a [routerLink]="['/dashboard']">
+        <i class='bx bx-grid-alt'></i>
+        <span class="link_name">Dashboard</span>
+      </a>
+      <ul class="sub-menu blank">
+        <li><a class="link_name" [routerLink]="['/dashboard']">All Tickets</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="iocn-link">
+        <a [routerLink]="['newTicket']">
+          <i class='bx bx-book-alt'></i>
+          <span class="link_name">New Ticket</span>
+        </a>
+        <i class='bx bxs-chevron-down arrow'></i>
+      </div>
+      <ul class="sub-menu">
+        <li><a class="link_name" [routerLink]="['newTicket']">New Ticket</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- ----------------------------------------------------------------------------- -->
+
+<section class="home-section">
+  <div class="">
+
+    <nav id="nav1" class="navbar navbar-expand-lg navbar-light bg-light static-top">
+      <div class="container">
+
+        <img id="navbarLogo" src="https://freshdesk.com/static-assets/images/common/company/logos/logo-fworks-black.svg"
+          alt="..." height="36">
+          <span class="fill"></span>
+          
+        <div id="hi">Hi,{{un}}</div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <button class="delete" (click)="deleteUser()">Delete User</button>
+            </li>
+            <li class="nav-item">
+              <button (click)="logOut()" class="delete">Log Out</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <router-outlet></router-outlet>
+
+
+
+
+
+  </div>
+
+</section>

@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img id="navbarLogo"
+                src="https://freshdesk.com/static-assets/images/common/company/logos/logo-fworks-black.svg" alt="..."
+                height="36">
+        </a>
+    </div>
+</nav>
+<div id="login">
+    <p style="padding: 30px; font-weight: 700; font-size: xxx-large;">Log in to your Freshdesk account</p>
+    <p>Please enter your Freshdesk username and we'll help you out!</p>
+    <form [formGroup]="myForm" (ngSubmit)="login(myForm)">
+        <fieldset id="loginInput">
+            <input id="inputName" action="" type="text" formControlName="userName" placeholder="Username">
+        </fieldset>
+        <br>
+        <fieldset id="loginInput">
+            <input id="inputName" action="" type="password" formControlName="password" placeholder="Password">
+        </fieldset>
+        <br>
+        <button name="submit" type="submit" data-submit="...Sending" id="proceed">PROCEED</button>
+    </form>
+    <button [routerLink]="['/sign']" id="sign">Don't have an account? Sign up for free</button>
+</div>
+<footer class="section bg-footer">
+    <div class="text-center mt-5">
+        <p class="footer-alt mb-0 f-14">Copyright © Freshworks Inc. All Rights Reserved</p>
+    </div>
+</footer>

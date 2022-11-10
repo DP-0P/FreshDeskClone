@@ -1,0 +1,50 @@
+<div class="container">
+    <form id="contact" [formGroup]="myForm" (ngSubmit)="update(myForm)">
+        <span>
+            <h3>Update Ticket</h3>
+        </span>
+        <div class="grid-container">
+            <div class="grid-item">
+
+                <fieldset>
+                    <input [(ngModel)]="myForm.value.contact" placeholder="Source" formControlName="contact" type="text" tabindex="4" required>
+                </fieldset>
+
+                <fieldset>
+                    <input [(ngModel)]="myForm.value.subject" placeholder="Subject" formControlName="subject" type="text" tabindex="4" required>
+                </fieldset>
+
+                <fieldset>
+                    <input [(ngModel)]="myForm.value.status" placeholder="Status" type="text" formControlName="status" tabindex="1" required autofocus>
+                </fieldset>
+
+                <fieldset>
+                    <select [(ngModel)]="myForm.value.agent" formControlName="agent">
+                        <option value="Sarah James">Sarah James</option>
+                        <option value="Matt Rogers">Matt Rogers</option>
+                        <option value="Emily Garcia">Emily Garcia</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div class="grid-item">
+
+                <fieldset>
+                    <input [(ngModel)]="myForm.value.phone" placeholder="Phone" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" formControlName="phone" type="text" tabindex="2" required>
+                </fieldset>
+
+                <fieldset>
+                    <input [(ngModel)]="myForm.value.date" formControlName="date" type="date" tabindex="2" required>
+                </fieldset>
+
+                <fieldset>
+                    <textarea [(ngModel)]="myForm.value.description" id="description" placeholder="Description" formControlName="description" type="text"
+                        tabindex="4" required></textarea>
+                </fieldset>
+
+            </div>
+        </div>
+        <fieldset>
+            <button [disabled]="!myForm.value.contact || !myForm.value.subject || !myForm.value.status || !myForm.value.phone || !myForm.value.date || !myForm.value.description || !myForm.value.agent" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        </fieldset>
+    </form>
+</div>

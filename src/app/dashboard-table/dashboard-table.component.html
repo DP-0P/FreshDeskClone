@@ -1,0 +1,28 @@
+<p-table [value]="ticketDetail" responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+    <tr>
+      <th pSortableColumn="agent">Agent<p-sortIcon field="agent"></p-sortIcon>
+      </th>
+      <th pSortableColumn="subject">Subject<p-sortIcon field="subject"></p-sortIcon>
+      </th>
+      <th pSortableColumn="status">Status<p-sortIcon field="status"></p-sortIcon>
+      </th>
+      <th pSortableColumn="date">Date<p-sortIcon field="date"></p-sortIcon>
+      </th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-ticket>
+    <tr *ngIf="ticket.userName == un">
+      <td>{{ticket.agent}}</td>
+      <td>{{ticket.subject}}</td>
+      <td>{{ticket.status}}</td>
+      <td>{{ticket.date}}</td>
+      <td [ngStyle]="{'width':'5px' }"><button class="delete" (click)="delete(ticket.id)">Delete</button></td>
+      <td [ngStyle]="{'width':'5px' }"><button class="update" (click)="update(ticket.id)">Update</button></td>
+      <td><button class="details" (click)="details(ticket.id)">Details</button></td>
+    </tr>
+  </ng-template>
+</p-table>

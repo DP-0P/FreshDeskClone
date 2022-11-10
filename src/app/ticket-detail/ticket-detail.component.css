@@ -1,0 +1,25 @@
+body {
+	background-color:lightblue;
+}
+h1 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+div{
+	width: 100%;
+	max-width: 400px;
+	background-color: #fff;
+	margin: 0 auto;
+	padding: 1.5%;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+	line-height: 14pt;
+}
+
+.centerText {
+	text-align: center;
+}
